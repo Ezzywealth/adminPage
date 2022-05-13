@@ -1,0 +1,26 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.avatar {
+  scale: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 40%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.img__icon {
+  justify-content: center;
+}

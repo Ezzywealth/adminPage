@@ -9,9 +9,11 @@ import ListItemText from "@mui/material/ListItemText";
 import quickMenu from "../components/drawer/quickMenu";
 import Staff from "../components/drawer/staff";
 import { Drawer } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 200;
 const SideBar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Drawer
@@ -29,7 +31,15 @@ const SideBar = () => {
         <Typography>Dashboard</Typography>
         <List>
           {Dashboard.map((dash, index) => (
-            <ListItem button key={index}>
+            <ListItem
+              button
+              key={index}
+              onClick={() => {
+                if (dash.name === "Home") navigate("/");
+                if (dash.name === "analytics") navigate("/analytics");
+                if (dash.name === "sales") navigate("/sales");
+              }}
+            >
               <ListItemIcon>{dash.icon}</ListItemIcon>
               <ListItemText primary={dash.name} />
             </ListItem>
@@ -39,7 +49,16 @@ const SideBar = () => {
         <Typography>Quick Menu</Typography>
         <List>
           {quickMenu.map((qM, index) => (
-            <ListItem button key={index}>
+            <ListItem
+              button
+              key={index}
+              onClick={() => {
+                if (qM.name === "Users") navigate("/users");
+                if (qM.name === "Products") navigate("/products");
+                if (qM.name === "Transactions") navigate("/transactions");
+                if (qM.name === "Reports") navigate("/reports");
+              }}
+            >
               <ListItemIcon>{qM.icon}</ListItemIcon>
               <ListItemText primary={qM.name} />
             </ListItem>

@@ -1,0 +1,11 @@
+.userlist {
+  display: flex;
+  align-items: center;
+}
+
+.userlist .avatar {
+  margin-right: 10px;
+}
+.button {
+  color: green;
+}
