@@ -1,3 +1,7 @@
+## Title
+
+Admin Panel
+
 ## General info
 
 This project is aimed at showcasing the administrative side of a web app
